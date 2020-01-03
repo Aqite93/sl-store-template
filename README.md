@@ -1,0 +1,1 @@
+# sl-store-template
