@@ -49,7 +49,8 @@ app.post('/login', function (req, res) {
       }
       console.log('compare result: ' + bcrypt.compareSync(req.body.password, row[0].password))
       // res.redirect("http://google.com");
-      res.render("./management/top.ejs");
+      // res.render("./management/top.ejs");
+      res.render("./management/top_template.ejs");
     });
   });
 });
@@ -60,7 +61,8 @@ app.get('/user/lists', function (req, res) {
       console.log('err: ' + err);
     }
     console.log(rows)
-    res.render("./management/userlist.ejs", { boardList: rows });
+    // res.render("./management/userlist.ejs", { boardList: rows });
+    res.render("./management/userlist_template.ejs", { boardList: rows });
   });
 });
 
